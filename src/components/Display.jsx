@@ -1,10 +1,12 @@
 import { useState } from "react"
 
-export default function Display({display,setDisplay}){
+export default function Display({display, errorMessage}){
     
 return (
     <div>
-        {display}
+        <input value={display} readOnly></input><br/>
+            { 
+         errorMessage ? (<p>Malformed Expression</p>) : null }
     </div>
 )
 }

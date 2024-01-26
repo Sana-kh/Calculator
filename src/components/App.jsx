@@ -4,13 +4,13 @@ import Display from "./Display"
 import Buttons from "./Buttons"
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [display, setDisplay] = useState("")
+  const [display, setDisplay] = useState("0")
+  const [errorMessage, setErrorMessage] = useState(false)
 
   return (
-    <>
-   
-   <Buttons display={display} setDisplay={setDisplay}/>
+    <>  
+   <Display display={display} setDisplay={setDisplay} errorMessage={errorMessage}/>
+   <Buttons display={display} setDisplay={setDisplay} errorMessage={errorMessage} setErrorMessage={setErrorMessage}/>
     </>
   )
 }
